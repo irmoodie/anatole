@@ -23,7 +23,7 @@ Anatole's aims to be minimalistic and sleek, but still brings some great functio
 - Katex support (optional)
 - Twitter Cards support
 - MIT License
-- Fontawesome icons
+- Fontawesome 5.15.1 icons
 - Custom CSS (optional)
 - Custom JavaScript (optional)
 - Medium like zoom for images
@@ -155,6 +155,13 @@ To use Google Analytics, a valid tracking code has to be added. If you don't wan
 googleAnalytics = "UA-123-45"
 ```
 
+### Google Site Verification
+To use Google Site Verification, add the following line to the `[params]`:
+```toml
+googleSiteVerify = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+```
+Replace the hash with the one Google provided you.
+
 ### Beautiful math functions
 ```toml
 ## Math settings
@@ -226,11 +233,11 @@ Content-Security-Policy "
   connect-src 'self';
   default-src 'self';
   frame-ancestors 'none';
-  font-src 'self' stackpath.bootstrapcdn.com;
+  font-src 'self' cdnjs.cloudflare.com;
   img-src 'self';
   object-src 'none';
   script-src 'self';
-  style-src 'self' stackpath.bootstrapcdn.com;
+  style-src 'self' cdnjs.cloudflare.com;
 "
 ```
 If you want to configure the security headers for a site running on Netlify, you want to make sure you create a special `_headers` file in your sites static folder. The content might look like the following:
@@ -241,7 +248,7 @@ If you want to configure the security headers for a site running on Netlify, you
   X-XSS-Protection: 1; mode=block
   X-Content-Type-Options: nosniff
   Referrer-Policy: same-origin
-  Content-Security-Policy:  base-uri 'self'; connect-src 'self'; default-src 'self'; frame-ancestors 'none'; font-src 'self' stackpath.bootstrapcdn.com; img-src 'self'; object-src 'none'; script-src 'self'; style-src 'self' stackpath.bootstrapcdn.com;
+  Content-Security-Policy:  base-uri 'self'; connect-src 'self'; default-src 'self'; frame-ancestors 'none'; font-src 'self' cdnjs.cloudflare.com; img-src 'self'; object-src 'none'; script-src 'self'; style-src 'self' cdnjs.cloudflare.com;
   Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
 ```
 ### Configurable pagination section
@@ -288,5 +295,3 @@ This theme is maintained by its author [Alexander Bilz](https://github.com/lxndr
 
 * Go to [Cai Cai](https://github.com/hi-caicai), for the great Anatole Farbox theme that formed the foundation for this theme.
 * Go to [Kareya Saleh](https://unsplash.com/photos/tLKOj6cNwe0) for providing the profile picture in the exampleSite.
-
-
